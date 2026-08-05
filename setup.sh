@@ -44,6 +44,7 @@ sudo -v
 run_script "$SCRIPT_DIR/scripts/01-system-packages.sh"
 run_script "$SCRIPT_DIR/scripts/02-development-tools.sh"
 run_script "$SCRIPT_DIR/scripts/03-conda.sh"
+run_script "$SCRIPT_DIR/scripts/04-snap.sh"
 
 echo
 echo "=================================================="
