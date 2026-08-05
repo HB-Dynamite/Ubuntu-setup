@@ -24,12 +24,35 @@ install_snap() {
     fi
 }
 
+# Install Brave from its official APT repository.
+install_brave() {
+    if command -v brave-browser >/dev/null 2>&1; then
+        echo "Brave Browser is already installed."
+        return
+    fi
+
+    echo "Adding the official Brave repository..."
+
+    sudo curl -fsSLo \
+        /usr/share/keyrings/brave-browser-archive-keyring.gpg \
+        https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+    sudo curl -fsSLo \
+        /etc/apt/sources.list.d/brave-browser-release.sources \
+        https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+
+    sudo apt-get update
+    sudo apt-get install -y brave-browser
+}
+
 # VS Code requires classic confinement so it can access development files
 # and tools outside its isolated Snap environment.
 install_snap code classic
 
 install_snap slack
 install_snap spotify
+
+install_brave
 
 echo
 echo "Desktop applications installed successfully."
