@@ -43,7 +43,7 @@ sudo -v
 # Run the individual setup steps in the intended order.
 run_script "$SCRIPT_DIR/scripts/01-system-packages.sh"
 run_script "$SCRIPT_DIR/scripts/02-development-tools.sh"
-run_script "$SCRIPT_DIR/scripts/03-desktop-apps.sh"
+run_script "$SCRIPT_DIR/scripts/03-conda.sh"
 
 echo
 echo "=================================================="
