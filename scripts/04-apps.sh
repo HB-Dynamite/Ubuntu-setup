@@ -56,7 +56,6 @@ install_brave
 
 echo
 echo "Desktop applications installed successfully."
-
 echo "Brave version:"
 brave-browser --version
 # Show the installed versions.
