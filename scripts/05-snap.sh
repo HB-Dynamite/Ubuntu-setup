@@ -30,6 +30,7 @@ install_snap code classic
 # Regular Snap applications.
 install_snap slack
 install_snap spotify
+install_snap libreoffice
 
 echo
 echo "Snap applications installed successfully."
